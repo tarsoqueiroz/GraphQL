@@ -13,7 +13,7 @@ module.exports = {
       id: proximoId(),
       ...args, //    nome, email, idade
       perfil_id: 1,
-      status: 'ATIVO'
+e      status: 'ATIVO'
     }
 
     usuarios.push(novo)
