@@ -1,0 +1,24 @@
+{
+  "name": "s04-desafio-2",
+  "version": "1.0.0",
+  "description": "Udemy course GraphQL - Challange 02",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --ext js,graphql"
+  },
+  "keywords": [
+    "NodeJS",
+    "GraphQL",
+    "SQLite3"
+  ],
+  "author": "Tarso Queiroz <tarsoqueiroz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.10.0",
+    "graphql": "^14.6.0",
+    "graphql-import": "^1.0.0-beta.2",
+    "knex": "^0.20.9",
+    "sqlite3": "^4.1.1",
+    "nodemon": "^2.0.2"
+  }
+}
