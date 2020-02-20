@@ -9,8 +9,8 @@ exports.up = (knex, Promise) => {
       table.timestamp('data_criacao').defaultTo(knex.fn.now())
   }).then(() => {
       return knex('usuarios').insert([
-          { nome: 'João Show', email: 'jshow@empresa.com.br', senha: '12345678' },
-          { nome: 'Jaime Lannister', email: 'jlann@empresa.com.br', senha: '12345678' },
+          { nome: 'João Show',         email: 'jshow@empresa.com.br',   senha: '12345678' },
+          { nome: 'Jaime Lannister',   email: 'jlann@empresa.com.br',   senha: '12345678' },
           { nome: 'Gabriela T. Nunes', email: 'gtnunes@empresa.com.br', senha: '12345678' },
       ])
   })

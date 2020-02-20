@@ -2,7 +2,7 @@ const db = require('../../config/db')
 
 module.exports = {
     async perfis() {
-        // implementar
+        return db('perfis')
     },
     async perfil(_, { filtro }) {
         // implementar
