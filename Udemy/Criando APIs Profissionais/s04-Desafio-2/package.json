@@ -16,7 +16,7 @@
   "dependencies": {
     "apollo-server": "^2.10.1",
     "graphql": "^14.6.0",
-    "graphql-import": "^1.0.0-beta.2",
+    "graphql-import": "0.0.0 - 0.9999.9999",
     "knex": "^0.20.10",
     "sqlite3": "^4.1.1"
   },
