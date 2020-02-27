@@ -1,3 +1,4 @@
+const { authSecret } = require('../.env')
 const jwt = require('jwt-simple')
 
 module.exports = async ({ req }) => {
@@ -12,8 +13,8 @@ module.exports = async ({ req }) => {
 
     if(token) {
         try {
-            let conteudoToken = jwt.decode(token,
-                process.env.APP_AUTH_SECRET)
+            let conteudoToken = jwt.decode(token, authSecret)
+            // console.log(conteudoToken)
             if(new Date(conteudoToken.exp * 1000) > new Date()) {
                 usuario = conteudoToken
             }

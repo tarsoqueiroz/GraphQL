@@ -1,3 +1,19 @@
+
+const path = require('path')
+
+module.exports = {
+
+  client: 'sqlite3',
+
+  connection: {
+    filename: path.join(__dirname, 'backend.sqlite3')
+  },
+
+  authSecret: 'b6b744b8c36a29f9efe4e5b33f34eb73104bdcb4',
+  nodeEnvironment: 'development'
+};
+
+
 NODE_ENV=development
 
 APP_DB_HOST=localhost

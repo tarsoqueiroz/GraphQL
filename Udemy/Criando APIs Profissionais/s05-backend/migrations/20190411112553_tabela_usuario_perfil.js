@@ -1,5 +1,5 @@
 
-exports.up = function(knex, Promise) {
+exports.up = (knex, Promise) => {
     return knex.schema.createTable('usuarios_perfis', table => {
         table.integer('usuario_id').unsigned()
         table.integer('perfil_id').unsigned()
@@ -9,6 +9,6 @@ exports.up = function(knex, Promise) {
     })
 };
 
-exports.down = function(knex, Promise) {
+exports.down = (knex, Promise) => {
     return knex.schema.dropTable('usuarios_perfis')
 };

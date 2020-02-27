@@ -18,15 +18,19 @@ const sql = `
 
 const getUsuario = async nomePerfil => {
     const res = await db.raw(sql, { nomePerfil })
-    return res ? res[0][0] : null
+
+    // return res ? res[0][0] : null
+    return res ? res[0] : null
 }
 
 module.exports = async req => {
-    const usuario = await getUsuario('comum')
+    const usuario = await getUsuario('admin')
+    console.log(usuario)
     if(usuario) {
         const { token } = await getUsuarioLogado(usuario)
         req.headers = {
             authorization: `Bearer ${token}`
         }
+        console.log(token)
     }
 }

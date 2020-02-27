@@ -1,5 +1,6 @@
 const jwt = require('jwt-simple')
 const { perfis: obterPerfis } = require('../Type/Usuario')
+const { authSecret } = require('../../.env')
 
 module.exports = {
     async getUsuarioLogado(usuario) {
@@ -14,12 +15,10 @@ module.exports = {
             iat: agora,
             exp: agora + (3 * 24 * 60 * 60)
         }
-
         
         return {
             ...usuarioInfo,
-            token: jwt.encode(usuarioInfo,
-                process.env.APP_AUTH_SECRET)
+            token: jwt.encode(usuarioInfo, authSecret)
         }
     }
 }
