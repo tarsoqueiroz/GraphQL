@@ -60,7 +60,7 @@ export default {
     methods: {
         ...mapActions(['setUsuario']),
         login() {
-            // implementar
+            console.log('Login')
         }
     }
 }
