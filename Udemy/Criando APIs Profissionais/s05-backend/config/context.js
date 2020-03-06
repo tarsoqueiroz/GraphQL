@@ -27,7 +27,7 @@ module.exports = async ({ req }) => {
         admin = usuario.perfis.includes('admin')
     }
 
-    const err = new Error('Acesso negado!')
+    const err = new Error('Acesso negado!!!')
 
     return {
         usuario,
